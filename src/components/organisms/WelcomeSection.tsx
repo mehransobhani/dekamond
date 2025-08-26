@@ -7,13 +7,13 @@ interface WelcomeSectionProps {
 }
 
 export default function WelcomeSection({user}: WelcomeSectionProps) {
-    return (<div className={"flex flex-col gap-2 justify-center items-center w-full h-[80vh]"}>
+    return (<div  className={"flex flex-col gap-2 justify-center items-center w-full h-[80vh]"}>
         <Alert className={"w-fit"}>
             <CheckCircle2Icon/>
-            <AlertTitle>Success! You have successfully logged in.
+            <AlertTitle>   Welcome, {user.name}!
             </AlertTitle>
             <AlertDescription>
-                Welcome, {user.name}!
+                You have successfully logged in.
             </AlertDescription>
         </Alert>
     </div>)

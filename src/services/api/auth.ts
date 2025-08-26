@@ -1,6 +1,6 @@
 import {UserResponse} from "@/services/types/user";
 
-export async function fetchUser(): Promise<UserResponse[]> {
+export async function fetchUser(): Promise<UserResponse> {
     const res = await fetch("https://randomuser.me/api/?results=1&nat=us");
 
     if (!res.ok) {

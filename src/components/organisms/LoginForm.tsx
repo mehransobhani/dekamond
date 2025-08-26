@@ -8,7 +8,6 @@ interface loginFormProps {
     error: string;
     loading: boolean;
     submit: (formData: any) => Promise<any>;
-
 }
 
 export default function LoginForm({loading, submit, error}: loginFormProps) {
@@ -36,7 +35,6 @@ export default function LoginForm({loading, submit, error}: loginFormProps) {
                 </form>
             </CardContent>
             <CardFooter className="flex-col gap-2">
-
             </CardFooter>
         </Card>
     )

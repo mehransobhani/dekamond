@@ -22,8 +22,8 @@ export default function Login() {
         onSuccess: (data) => {
             if (data) {
                 storeUser(data)
-                // mutation.reset();
-                // redirect("/")
+                mutation.reset();
+                redirect("/")
             }
         },
     });
