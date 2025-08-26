@@ -27,14 +27,12 @@ export default function LoginForm({loading, submit, error}: loginFormProps) {
             <CardContent>
                 <form onSubmit={handleSubmit(submit)}>
                     <div className="flex flex-col gap-6">
-                        <div className="grid gap-2">
-                            <FormField
+                             <FormField
                                 error={error}
                                 loading={loading}
                                 label={"mobile"}
                                 {...register("mobile")}
                             />
-                        </div>
                         <Button
                             aria-label={"login"}
                             loading={loading}
