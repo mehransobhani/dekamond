@@ -7,7 +7,7 @@ import {useForm} from "react-hook-form";
 interface loginFormProps {
     error: string;
     loading: boolean;
-    submit: (formData: any) => Promise<any>;
+    submit: (formData: { mobile: string }) => Promise<unknown>;
 }
 
 export default function LoginForm({loading, submit, error}: loginFormProps) {
