@@ -6,7 +6,7 @@ export default function Navbar()
 {
     const logout=useLogout();
     return(<div className={"w-full h-20 bg-slate-800 shadow-xl flex items-center px-2 justify-between"}>
-        <Button onClick={logout}>
+        <Button aria-label={"logout"}  onClick={logout}>
             Logout
         </Button>
         <Label className={"text-white"}>

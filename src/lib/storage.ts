@@ -4,7 +4,7 @@ const LOCAL_STORAGE_KEY = "user";
 
 export function storeUser(user: UserResponse) {
     const storedUser: StoredUser = {
-        name: `${user.name.first}  `,
+        name: `${user.name.first} ${user.name.last}  `,
         email: user.email,
         picture: user.picture.large,
     };

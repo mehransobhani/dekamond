@@ -3,7 +3,7 @@
 import LoginForm from "@/components/organisms/LoginForm";
 import {fetchUser} from "@/services/api/auth";
 import {useMutation} from "react-query";
-import {validatePhone} from "@/lib/validators";
+import {validateMobile} from "@/lib/validators";
 import {useState} from "react";
 import {redirect} from "next/navigation";
 import {storeUser} from "@/lib/storage";
@@ -13,16 +13,20 @@ export default function Login() {
     const mutation = useMutation({
         mutationKey: [`fetch-user`],
         mutationFn: async (formData: { mobile: string }) => {
-            if (validatePhone(formData.mobile)) {
+            //validate mobile number
+            if (validateMobile(formData.mobile)) {
+                //clear error
                 setError("")
                 return fetchUser();
             }
-            setError("please enter valid number");
+            //show error
+            setError("please enter valid mobile number");
         },
         onSuccess: (data) => {
             if (data) {
+                //add response to localstorage
                 storeUser(data)
-                mutation.reset();
+                //redirect to dashboard
                 redirect("/")
             }
         },
