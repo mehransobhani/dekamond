@@ -32,7 +32,7 @@ export default function Login() {
         },
     });
     return (<>
-        <div className={"flex justify-center items-center w-full h-screen"}>
+        <div className={"flex justify-center items-center w-full sm:min-h-screen p-1 sm:p-0"}>
             <LoginForm
                 error={error}
                 loading={mutation.isLoading}
